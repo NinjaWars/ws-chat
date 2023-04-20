@@ -1,0 +1,9 @@
+{
+    "requestContext": {
+        "accountId": "123456789012",
+        "resourceId": "123456",
+        "domainName": "00000xxxxx.execute-api.us-east-2.amazonaws.com",
+        "stage": "production"
+    },
+    "body": "{\"message\":\"test from test event in aws console\",\"uname\":\"whoever\",\"date\":\"1681948677627\",\"sender_id\":\"128274\"}"
+}
