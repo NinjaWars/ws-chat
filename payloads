@@ -1,0 +1,4 @@
+{
+    "action": "onMessage",
+    "message": "Hello from the nw chat echo"
+}
