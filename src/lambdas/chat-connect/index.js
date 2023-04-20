@@ -2,11 +2,9 @@ const AWS = require('aws-sdk');
 
 const dynamo = new AWS.DynamoDB.DocumentClient();
 
+function addConnectionId(connectionId) { return dynamo.put({ TableName: 'chat', Item: { connectionid: connectionId } }).promise(); }
 
-function addConnectionId(connectionId) { return dynamo.put({ TableName: 'chat', Item: { connectionid: connectionId }, }).promise(); }
-
-exports.handler = (event, context, callback) => { const connectionId = event.requestContext.connectionId; addConnectionId(connectionId).then(() => { callback(null, { statusCode: 200, }) }); }
-
+exports.handler = (event, context, callback) => { const { connectionId } = event.requestContext; addConnectionId(connectionId).then(() => { callback(null, { statusCode: 200 }); }); };
 
 /**
  * Demonstrates a simple HTTP endpoint using API Gateway. You have full
