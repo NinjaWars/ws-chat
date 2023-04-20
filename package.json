@@ -5,10 +5,14 @@
   "license": "MIT",
   "packageManager": "yarn@3.5.0",
   "devDependencies": {
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb": "^19.0.4",
     "wscat": "^5.2.0"
   },
   "scripts": {
     "test": "wscat -c wss://blisp2vgjg.execute-api.us-east-2.amazonaws.com/production/",
-    "example": "echo \"connect via yarn test, then paste in json, see example.json\""
+    "example": "echo \"connect via yarn test, then paste in json, see example.json\"",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
   }
 }
